@@ -1,0 +1,62 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="YolongHVPult.MainWindow"
+        Title="YolongHVPult">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Device">
+                <MenuItem Name="DeviceXRRP" Header="XRRP(AC only type" Click="DeviceXRRP_OnClick"/>
+                <MenuItem Name="DeviceGGF" Header="GGF(battery type)" Click="DeviceGGF_OnClick"/>
+            </MenuItem>
+        </Menu>
+        <TextBlock/>
+        <StackPanel Margin="20">
+        <Button Name="LightOn" Grid.Row="0" Grid.Column="0" Click="LightOn_OnClick"> Light On </Button>
+            <Button Name="DeviceReset" Grid.Row="0" Grid.Column="0" Click="DeviceReset_OnClick_OnClick"> Device Reset </Button>   
+        <Button Name="HvPrepare" Click="HvPrepare_OnClick" Grid.Row="1" Grid.Column="0">Write parametrs</Button>
+            <Button Name="HvPreparePure" Click="HvPreparePure_OnClick" Grid.Column="0">Prepare HV source</Button>    
+        <Button Name="UnconditionalXRay" Click="UnconditionalXRay_OnClick" Grid.Row="2" Grid.Column="0">Unconditional X-Ray </Button>
+        <Button Name="ConditionalXRay" Click="ConditionalXRay_OnClick" Grid.Row="3" Grid.Column="0">Conditional X-Ray </Button>
+        <Button Name="StopMonoXRay" Grid.Row="4" Grid.Column="0">Stop mono X-Ray</Button>
+        <Button Name="FullStopXRay" Grid.Row="5" Grid.Column="0"> Full stop X-Ray </Button>
+        <Button Name="ImitateXRay" Click="ImitateXRay_OnClick">Imitate X-Ray</Button>
+            <Button Name="RealXray" Click="RealXray_OnClick">Make X-Ray shot </Button>
+            <Border></Border> 
+            <Button Name="HvInc" Click="HvInc_OnClick">HV+</Button>
+            <Button Name="HvDec" Click="HvDec_OnClick">HV-</Button>
+            <Button Name="MaInc" Click="MaInc_OnClick">mA+</Button>
+            <Button Name="MaDec" Click="MaDec_OnClick">mA-</Button>
+            <Button Name="MsInc" Click="MsInc_OnClick">ms+</Button>
+            <Button Name="MsDec" Click="MsDec_OnClick">ms-</Button>
+            <Button Name="MasInc" Click="MasInc_OnClick">mAs+</Button>
+            <Button Name="MasDec" Click="MasDec_OnClick">mAs-</Button>
+              
+        </StackPanel>     
+        <StackPanel Margin="20">
+            <TextBlock Margin="0 5">Focus type:</TextBlock>
+            <ListBox x:Name="FocusType" SelectionChanged="FocusType_OnSelectionChanged"/>
+        </StackPanel>
+        <StackPanel Margin="20">
+            <TextBlock Margin="0 5">Device Mode:</TextBlock>
+            <ListBox x:Name="DeviceMode" />
+        </StackPanel>  
+        <StackPanel Margin="20">
+            <TextBlock Margin="0 5">Kv</TextBlock>
+            <TextBox Name="Hv" >50</TextBox>
+            <TextBlock Margin="0 5">mA</TextBlock>
+            <TextBox Name="Ma">100</TextBox>
+            <TextBlock Margin="0 5">mAs</TextBlock>
+            <TextBox Name="Mas">1</TextBox>
+            <TextBlock Margin="0 5">mS</TextBlock>
+            <TextBox Name="Ms">100</TextBox>
+            <TextBlock>Command</TextBlock>
+            <TextBox Name="Command">RF</TextBox>
+            <Button Name="SendCommand" Click="SendCommand_OnClick">Send Command </Button>
+            <TextBlock>Receive:</TextBlock>
+            <TextBox Name="Receive" MaxLines="128" Height="140">Empty </TextBox>
+        </StackPanel>  
+    </DockPanel>
+</Window>
