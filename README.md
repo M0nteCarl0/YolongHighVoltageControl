@@ -1,10 +1,7 @@
 
 # Yolong High Voltage Control
-==========================
 
 ## Overview
------------
-
 This utility provides a control interface for the Yolong high voltage x-ray source engineer. It allows users to interact with the x-ray source and perform various functions.
 
 ### Main Functionality
