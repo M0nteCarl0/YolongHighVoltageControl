@@ -1,11 +1,21 @@
-# YolongHighVoltageControl
- Avalonia based Yolong high voltage x-ray source enginer control
-## Main functional of utility
-* Set and get HV level of source.
-* Set and get current of tube.
-* Set and get mAs of tube.
-* Get verion of firmware of source x-ray.
-* Direct send of command to source of x-ray.
+
+# Yolong High Voltage Control
+==========================
+
+## Overview
+-----------
+
+This utility provides a control interface for the Yolong high voltage x-ray source engineer. It allows users to interact with the x-ray source and perform various functions.
+
+### Main Functionality
+
+* **Set and Get HV Level**
+* **Set and Get Tube Current**
+* **Set and Get mAs**
+* **Get Firmware Version**
+* **Direct Command Sending**
+* **Make x-ray shot**
+
 
 ## Supported platfforms
 * Windows
